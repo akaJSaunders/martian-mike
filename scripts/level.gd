@@ -4,6 +4,11 @@ extends Node2D
 
 @onready var player = $Player
 
+func _ready():
+	var traps = get_tree().get_nodes_in_group('traps')
+	for trap in traps:
+		trap.touched_player.connect(_on_trap_touched_player)
+
 func _process(delta):
 	if Input.is_action_just_pressed('quit'):
 		get_tree().quit()
@@ -14,7 +19,7 @@ func _process(delta):
 func _on_deathzone_body_entered(body):
 	reset_player()
 
-func _on_trap_touched_payer():
+func _on_trap_touched_player():
 	reset_player()
 	
 func reset_player():

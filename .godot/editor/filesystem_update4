@@ -10,3 +10,4 @@ res://trap.gd
 res://scripts/level.gd
 res://scenes/spike_ball.tscn
 res://scripts/trap.gd
+res://scenes/tile_map.tscn
