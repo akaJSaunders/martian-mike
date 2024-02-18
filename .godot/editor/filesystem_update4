@@ -1,4 +1,12 @@
-res://level.tscn
-res://level.gd
 res://player.tscn
-res://player.gd
+res://level.tscn
+res://scenes/level.tscn
+res://scenes/player.tscn
+res://scenes/jump_pad.tscn
+res://jump_pad.gd
+res://scripts/player.gd
+res://scenes/saw.tscn
+res://trap.gd
+res://scripts/level.gd
+res://scenes/spike_ball.tscn
+res://scripts/trap.gd

@@ -1,15 +1,17 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1708194056
+::res://::1708281405
 icon.svg::CompressedTexture2D::8443865443409984359::1708193947::1708193954::1::::<><>::
+jump_pad.gd::GDScript::-1::1708280624::0::1::::<>Area2D<>::
+README.md::TextFile::-1::1708200406::0::1::::<><>::
 ::res://assets/::1708194039
-::res://assets/audio/::1708194039
+::res://assets/audio/::1708194063
 hurt.wav::AudioStreamWAV::5587641231762737989::1708194039::1708194063::1::::<><>::
 jump.wav::AudioStreamWAV::1588162087536317100::1708194039::1708194063::1::::<><>::
-::res://assets/fonts/::1708194039
+::res://assets/fonts/::1708194062
 Kenney Pixel Square.ttf::FontFile::943603017286636467::1708194039::1708194062::1::::<><>::
-::res://assets/textures/::1708194039
+::res://assets/textures/::1708194062
 Terrain (16x16).png::CompressedTexture2D::8584577562462484121::1708194039::1708194062::1::::<><>::
-::res://assets/textures/bg/::1708194039
+::res://assets/textures/bg/::1708194063
 Blue.png::CompressedTexture2D::7207375783018527324::1708194039::1708194063::1::::<><>::
 Brown.png::CompressedTexture2D::334076146754775924::1708194039::1708194063::1::::<><>::
 Gray.png::CompressedTexture2D::2248200923398321268::1708194039::1708194063::1::::<><>::
@@ -17,7 +19,7 @@ Green.png::CompressedTexture2D::2972503201668372888::1708194039::1708194062::1::
 Pink.png::CompressedTexture2D::6323674334711167125::1708194039::1708194062::1::::<><>::
 Purple.png::CompressedTexture2D::1151990566117183728::1708194039::1708194062::1::::<><>::
 Yellow.png::CompressedTexture2D::7820575162772539878::1708194039::1708194062::1::::<><>::
-::res://assets/textures/other/::1708194039
+::res://assets/textures/other/::1708194063
 End (Idle).png::CompressedTexture2D::8793119106367538291::1708194039::1708194062::1::::<><>::
 End (Pressed) (64x64).png::CompressedTexture2D::2457218221124906624::1708194039::1708194062::1::::<><>::
 Idle.png::CompressedTexture2D::4234178553194935090::1708194039::1708194062::1::::<><>::
@@ -25,10 +27,18 @@ Jump (28x28).png::CompressedTexture2D::8520329532058035083::1708194039::17081940
 Saw.png::CompressedTexture2D::4909645849420737246::1708194039::1708194062::1::::<><>::
 Spiked Ball.png::CompressedTexture2D::7631519347983920466::1708194039::1708194062::1::::<><>::
 Start.png::CompressedTexture2D::7033579117371323580::1708194039::1708194062::1::::<><>::
-::res://assets/textures/player/::1708194039
+::res://assets/textures/player/::1708194062
 Fall (32x32).png::CompressedTexture2D::1572404361192119447::1708194039::1708194062::1::::<><>::
 Idle (32x32).png::CompressedTexture2D::2452666020848737456::1708194039::1708194062::1::::<><>::
 Jump (32x32).png::CompressedTexture2D::7828736715018669920::1708194039::1708194062::1::::<><>::
 Run (32x32).png::CompressedTexture2D::8556915545316416611::1708194039::1708194062::1::::<><>::
-::res://scenes/::1708193971
-::res://scripts/::1708193976
+::res://scenes/::1708281405
+jump_pad.tscn::PackedScene::9221355222642433063::1708281409::0::1::::<><>::uid://b1lckjjx1pk31::::res://assets/textures/other/Idle.png<>res://jump_pad.gd<>uid://dtnkt2o3iwqmd::::res://assets/textures/other/Jump (28x28).png
+level.tscn::PackedScene::274681806495217298::1708281249::0::1::::<><>::res://scripts/level.gd<>uid://dskjh3dls5ygl::::res://icon.svg<>uid://d4m5mxqu4f76r::::res://scenes/jump_pad.tscn<>uid://d0fmgyhutata5::::res://scenes/player.tscn<>uid://dd8c5bdangebd::::res://scenes/saw.tscn
+player.tscn::PackedScene::8925045621785193818::1708281249::0::1::::<><>::res://scripts/player.gd<>uid://wnxjgh6ix3gd::::res://assets/textures/player/Fall (32x32).png<>uid://ba7dby8pyyuhs::::res://assets/textures/player/Idle (32x32).png<>uid://djskfdj2ua65i::::res://assets/textures/player/Jump (32x32).png<>uid://dt6bfccoc7qf0::::res://assets/textures/player/Run (32x32).png
+saw.tscn::PackedScene::7438128112855428981::1708281405::0::1::::<><>::res://scripts/trap.gd<>uid://cb7jfdg8r5vg5::::res://assets/textures/other/Saw.png
+spike_ball.tscn::PackedScene::6677041936728484949::1708281399::0::1::::<><>::uid://dgy1akbis571o::::res://assets/textures/other/Spiked Ball.png
+::res://scripts/::1708281405
+level.gd::GDScript::-1::1708281248::0::1::::<>Node2D<>::
+player.gd::GDScript::-1::1708280571::0::1::::Player<>CharacterBody2D<>::
+trap.gd::GDScript::-1::1708281046::0::1::::<>Node2D<>::
