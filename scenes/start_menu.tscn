@@ -1,0 +1,117 @@
+[gd_scene load_steps=9 format=3 uid="uid://cnt8b5bmuatbq"]
+
+[ext_resource type="Script" path="res://scripts/start_menu.gd" id="1_4fb14"]
+[ext_resource type="PackedScene" uid="uid://b04ugyer4o50i" path="res://scenes/bg.tscn" id="1_vovrl"]
+[ext_resource type="Texture2D" uid="uid://bil5xtvdjrbr1" path="res://assets/textures/bg/Green.png" id="2_qwbdb"]
+[ext_resource type="FontFile" uid="uid://npdaeovvd23h" path="res://assets/fonts/Kenney Pixel Square.ttf" id="3_ukrx7"]
+[ext_resource type="PackedScene" uid="uid://d4m5mxqu4f76r" path="res://scenes/jump_pad.tscn" id="5_08uxw"]
+[ext_resource type="PackedScene" uid="uid://dd8c5bdangebd" path="res://scenes/saw.tscn" id="6_yncbl"]
+[ext_resource type="PackedScene" uid="uid://c2en51m2dnv5n" path="res://scenes/spike_ball.tscn" id="7_585kk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_y68g5"]
+font = ExtResource("3_ukrx7")
+font_size = 30
+outline_size = 13
+outline_color = Color(0, 0, 0, 1)
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4fb14")
+
+[node name="BG" parent="." instance=ExtResource("1_vovrl")]
+bg_texture = ExtResource("2_qwbdb")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -19.0
+offset_top = -59.0
+offset_right = 21.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Martian Mike"
+label_settings = SubResource("LabelSettings_y68g5")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -53.0
+offset_top = -12.0
+offset_right = 43.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_ukrx7")
+theme_override_font_sizes/font_size = 15
+text = "Start"
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.0
+offset_top = 30.0
+offset_right = 23.0
+offset_bottom = 54.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_ukrx7")
+theme_override_font_sizes/font_size = 10
+text = "QUIT"
+
+[node name="Objects" type="Node2D" parent="QuitButton"]
+
+[node name="JumpPad" parent="QuitButton/Objects" instance=ExtResource("5_08uxw")]
+position = Vector2(340, -34)
+
+[node name="JumpPad2" parent="QuitButton/Objects" instance=ExtResource("5_08uxw")]
+position = Vector2(914, -147)
+
+[node name="JumpPad3" parent="QuitButton/Objects" instance=ExtResource("5_08uxw")]
+position = Vector2(531, -82)
+
+[node name="JumpPad4" parent="QuitButton/Objects" instance=ExtResource("5_08uxw")]
+position = Vector2(864, -98)
+
+[node name="Traps" type="Node2D" parent="QuitButton"]
+position = Vector2(5, 1)
+
+[node name="saw" parent="QuitButton/Traps" instance=ExtResource("6_yncbl")]
+position = Vector2(436, -28)
+
+[node name="saw4" parent="QuitButton/Traps" instance=ExtResource("6_yncbl")]
+position = Vector2(572, -43)
+
+[node name="saw3" parent="QuitButton/Traps" instance=ExtResource("6_yncbl")]
+position = Vector2(612, -79)
+
+[node name="SpikeBall" parent="QuitButton/Traps" instance=ExtResource("7_585kk")]
+position = Vector2(794, -131)
+
+[node name="SpikeBall2" parent="QuitButton/Traps" instance=ExtResource("7_585kk")]
+position = Vector2(712, -128)
+
+[node name="saw2" parent="QuitButton/Traps" instance=ExtResource("6_yncbl")]
+position = Vector2(381, 8)
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
